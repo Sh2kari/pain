@@ -1,0 +1,7 @@
+.root {
+  flexgrow: 1;
+  paddingleft: 25px;
+  paddingright: 25px;
+  paddingtop: 20px;
+  paddingbottom: 30px;
+}

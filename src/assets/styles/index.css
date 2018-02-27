@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+#loader .text {
+  color: #000;
+  display: inline-block;
+  margin-left: 5px;
+  font-family: Arial;
+  font-size: 16px;
+}
+
+#loader .bounceball {
+  position: relative;
+  display: inline-block;
+  height: 37px;
+  width: 15px;
+}
+
+#loader .bounceball:before {
+  position: absolute;
+  content: '';
+  display: block;
+  bottom: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #000;
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-animation: bounce 1200ms alternate infinite linear;
+  animation: bounce 1200ms alternate infinite linear;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    top: 30px;
+    height: 5px;
+    border-radius: 60px 60px 20px 20px;
+    -webkit-transform: scaleX(2);
+    transform: scaleX(2);
+  }
+  35% {
+    height: 15px;
+    border-radius: 50%;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    top: 30px;
+    height: 5px;
+    border-radius: 60px 60px 20px 20px;
+    -webkit-transform: scaleX(2);
+    transform: scaleX(2);
+  }
+  35% {
+    height: 15px;
+    border-radius: 50%;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+  100% {
+    top: 0;
+  }
+}
+
+#loader .wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#root {
+  display: none;
+}
+
+#loader {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  z-index: 22222;
+}
